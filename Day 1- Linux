@@ -1,4 +1,7 @@
 Linux Concepts learnt on 12/03/2025
 
-1. pwd: Project working directory - current working directory in the terminal.
-2. 
+1. pwd: Project working directory - current working directory in the terminal. /home/ubuntu
+2. mkdir foldername: Creates new folder
+3. rmdir foldername: Deletes an empty folder
+4. 
+
