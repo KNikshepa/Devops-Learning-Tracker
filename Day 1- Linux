@@ -11,6 +11,7 @@ Touch command:
 6. To view entered text: cat f1.txt
 7. This command prints the text in second line without overrding it >> : echo "2nd line entered" >> f1.txt
 8. This command deletes existing txt which means it overrides the previous text: echo "3rd line entered" > f1.txt
+touch f1.txt f2.txt -> Create multiple files
 
 nano command:
 
@@ -82,4 +83,17 @@ ubuntu@ip-172-31-89-35:~$
 mv f3.txt f3rename.txt
 mv folder1 folder1rename
 
-18. 
+18. rm: Remove files or directories
+rm -r folder1rename - Rename the folder
+rm f3rename.txt - Rename the file
+
+19. cat: Concatenate and display file content
+a. cat f1.txt -> Display the content of the file
+b. cat f1.txt f2.txt -> Concatenate the content of 2 files
+c. cat > newfile.txt -> Creates new file -> type and then ctrl + D
+d. cat >> existingfile.txt -> Append the content to existing file
+e. cat file1.txt file2.txt > combined.txt -> Concatenate and save to a new file:
+f. cat -n filename.txt -> content with line no
+
+20. 
+
