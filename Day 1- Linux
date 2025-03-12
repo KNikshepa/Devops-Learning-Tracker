@@ -3,5 +3,30 @@ Linux Concepts learnt on 12/03/2025
 1. pwd: Project working directory - current working directory in the terminal. /home/ubuntu
 2. mkdir foldername: Creates new folder
 3. rmdir foldername: Deletes an empty folder
-4. 
+
+Touch command:
+
+4. touch file.txt : Creates an empty file
+5. To add txt in empty file: echo "1st line entered" > f1.txt
+6. To view entered text: cat f1.txt
+7. This command prints the text in second line without overrding it >> : echo "2nd line entered" >> f1.txt
+8. This command deletes existing txt which means it overrides the previous text: echo "3rd line entered" > f1.txt
+
+nano command:
+
+9. nano f2.txt
+Window will open : type the text, click on ctrl + x, Y to save or N to ignore the text typed.
+Delete one line: ctrl+k
+Delete all lines: ctrl + a-> ctrl+k
+
+vi or vim command:
+10. vim f3.txt
+Press I to enter text
+Press esc
+:wq to save and exit
+:q! to just exit without save
+dd -> deletes single line
+:%d -> all lines
+
+11. 
 
