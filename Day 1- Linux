@@ -28,5 +28,29 @@ Press esc
 dd -> deletes single line
 :%d -> all lines
 
-11. 
+11. ls -> Lists all the directories and files
+12. ls -l
+-rw-rw-r-- 1 ubuntu ubuntu   17 Mar 12 13:46 f1.txt
+File permissions (e.g., -rw-rw-r--)
+Number of hard links (e.g., 1)
+Owner (e.g., ubuntu)
+Group (e.g., ubuntu)
+File size (e.g., 17 bytes)
+Timestamp (e.g., Mar 12 13:46)
+File name (e.g., f1.txt)
+13. ls -ltr: sorted by modification time in reverse order (oldest first).
+
+14. cd folder1
+2nd way: ubuntu@ip-172-31-89-35:~/folder1$ cd folder5/folder6 (Relative path)
+3rd way: cd ../..
+4th way:cd /home/ubuntu/folder1/folder5/folder6 (Absolute path)
+
+15. cp copy:
+a. cp f1.txt f4copy.txt -> Copying the contents from existing file to new file f4copy.txt
+b. In Unbuntu folder, i have 2 folders-> folder1 and folder 3
+In ubuntu path: cp -r folder1 folder3
+folder1 will be inside the folder3
+c. In unbuntu, i have folder1
+cp -r folder1 folder2
+creates new folder 2 and copies only files in folder1 to newly created folder2
 
