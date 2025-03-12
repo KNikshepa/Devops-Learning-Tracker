@@ -78,4 +78,8 @@ d. Folder1 f7 txt to folder2
 ubuntu@ip-172-31-89-35:~$ mv folder1/f7.txt folder2
 ubuntu@ip-172-31-89-35:~$ 
 
-17. 
+17. Renaming the files or folder: mv
+mv f3.txt f3rename.txt
+mv folder1 folder1rename
+
+18. 
