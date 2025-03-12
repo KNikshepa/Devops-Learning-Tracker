@@ -53,4 +53,29 @@ folder1 will be inside the folder3
 c. In unbuntu, i have folder1
 cp -r folder1 folder2
 creates new folder 2 and copies only files in folder1 to newly created folder2
+d. Inside folder2: cp -r ../folder1 .
+../folder1: Refers to folder1 in the parent directory (one level up from folder2).
+.: Refers to the current directory, which in this case is folder2.
 
+16. mv move:
+a. file in folder 1 moved to folder2
+ubuntu@ip-172-31-89-35:~/folder1$ ls
+f1.txt
+ubuntu@ip-172-31-89-35:~/folder1$ mv f1.txt ../folder2
+ubuntu@ip-172-31-89-35:~/folder1$ 
+
+b. Unbutu folder f3 txt file to folder2
+ubuntu@ip-172-31-89-35:~$ touch f3.txt
+
+c. folder file to ubuntu folder
+ubuntu@ip-172-31-89-35:~/folder2$ ls
+f1.txt  f3.txt
+ubuntu@ip-172-31-89-35:~/folder2$ mv f3.txt ..
+ubuntu@ip-172-31-89-35:~/folder2$ cd ..
+ubuntu@ip-172-31-89-35:~$ mv f3.txt folder2
+
+d. Folder1 f7 txt to folder2
+ubuntu@ip-172-31-89-35:~$ mv folder1/f7.txt folder2
+ubuntu@ip-172-31-89-35:~$ 
+
+17. 
