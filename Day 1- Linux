@@ -115,6 +115,8 @@ drwxrwxr-x 2 ubuntu ubuntu 4096 Mar 13 02:25 folder1
 rw-	Group has Read (r) + Write (w) permissions, but no Execute (-)
 
 21. chown: Change file owner and group
+
+1st way
 For this, I have created a new user and group
 22. sudo useradd -m newuser3 -> Created new user
 23. sudo groupadd newgroup -> Created new group
@@ -123,6 +125,20 @@ sudo usermod -aG newgroup newuser3
 24. set the password for the newuser3: 
 sudo passwd newuser3
 
+2nd way
+For this, I create a group and without creating the user separately i will create during adding them to group
+sudo useradd -m -G newgroup newuser4
+
+Few checks
+ubuntu@ip-172-31-91-109:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-91-109:~$ cd ..
+ubuntu@ip-172-31-91-109:/home$ ls
+newuser1  ubuntu
+Enter passowrd:
+pwd: gives /home/newuser1
+
+su - newuser1
 
 
 
