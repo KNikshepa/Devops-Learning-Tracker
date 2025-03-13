@@ -135,10 +135,9 @@ ubuntu@ip-172-31-91-109:~$ pwd
 ubuntu@ip-172-31-91-109:~$ cd ..
 ubuntu@ip-172-31-91-109:/home$ ls
 newuser1  ubuntu
+25. su - newuser1  -> to switch to newuser1
 Enter passowrd:
 pwd: gives /home/newuser1
-
-su - newuser1
 
 
 
