@@ -139,5 +139,50 @@ newuser1  ubuntu
 Enter passowrd:
 pwd: gives /home/newuser1
 
+ubuntu@ip-172-31-91-109:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-91-109:~$ cd ..
+ubuntu@ip-172-31-91-109:/home$ ls -l
+total 8
+drwxr-x--- 2 newuser1 newuser1 4096 Mar 13 04:27 newuser1
+drwxr-x--- 5 ubuntu   ubuntu   4096 Mar 13 04:28 ubuntu
+ubuntu@ip-172-31-91-109:/home$ su newuser1
+Password: 
+$ ls
+newuser1  ubuntu
+$ pwd 
+/home
+$ cd ~
+$ pwd
+/home/newuser1
+$ 
+exit - exit from the screen
+
+sudo chown newuser1 f1.txt -> transfer permission from ubuntu to new user
+only the owner of a file (or root) can change its permissions using chmod.
+sudo chown :newgroup f1.txt -> Change the ownership of the group
+sudo chown newuser1:newgroup f1.txt -> To change both User and Group
+sudo chgrp newgroup filename
+
+26. stat f1.txt
+✅ Size
+✅ Permissions
+✅ Owner & Group
+✅ Last Access & Modification Times
+✅ Inode number
+
+Log file to learn about grep, awk, sid and find
+
+[2025-03-13 08:10:05] INFO: Application started
+[2025-03-13 08:12:14] ERROR: Database connection failed
+[2025-03-13 08:15:30] WARNING: High memory usage detected
+[2025-03-13 08:18:45] INFO: User 'admin' logged in
+[2025-03-13 08:20:55] ERROR: Failed to load configuration
+[2025-03-13 08:22:10] INFO: Background job completed
+[2025-03-13 08:25:42] WARNING: Disk space running low
+[2025-03-13 08:30:00] ERROR: Network timeout occurred
+
+27. grep:
+
 
 
