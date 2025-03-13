@@ -182,7 +182,52 @@ Log file to learn about grep, awk, sid and find
 [2025-03-13 08:25:42] WARNING: Disk space running low
 [2025-03-13 08:30:00] ERROR: Network timeout occurred
 
+2nd one:
+2025-03-13 12:01:15 [INFO] Application started successfully.
+2025-03-13 12:02:00 [DEBUG] Loading configuration from /etc/app/config.yaml
+2025-03-13 12:02:30 [WARNING] Disk space is running low: 10% remaining.
+2025-03-13 12:03:45 [ERROR] Database connection failed: timeout after 5 seconds.
+2025-03-13 12:04:10 [INFO] Retrying database connection...
+2025-03-13 12:04:35 [ERROR] Database reconnection failed.
+2025-03-13 12:05:20 [CRITICAL] System shutting down due to repeated failures.
+2025-03-13 12:06:00 [INFO] Restarting application services.
+
 27. grep:
-
-
-
+1. Search for the string in the file:
+grep INFO logfile.log
+grep -i info logfile.log
+grep -w INFO logfile.log
+grep -v "error" logfile.txt -> except error
+2.  Pattern Matching & Regex
+grep "^ERROR" logfile.log    # Lines starting with "ERROR"
+grep "failed$" logfile.log   # Lines ending with "failed"
+grep -E "ERROR|WARNING" logfile.log  # Match multiple patterns
+grep -o "[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}" logfile.log  # Extract dates (YYYY-MM-DD)
+3. Recursive & Multiple Files
+grep "ERROR" /var/log/*.log     # Search in multiple files
+grep -r "ERROR" /var/log/       # Search in all files recursively
+grep --exclude="*.txt" "ERROR" *  # Exclude specific file types
+4. Highlight & Line Numbering
+grep --color "ERROR" logfile.log  # Highlight matches
+grep -n "ERROR" logfile.log       # Show line numbers
+5. Context (Show Lines Before/After Match)
+grep -A 2 "ERROR" logfile.log  # Show 2 lines After match
+grep -B 2 "ERROR" logfile.log  # Show 2 lines Before match
+grep -C 2 "ERROR" logfile.log  # Show 2 lines Before & After
+6. Performance & Advanced Features
+grep --include="*.log" "ERROR" *  # Search only in .log files
+grep -l "ERROR" *                 # List filenames with matches
+grep -c "ERROR" logfile.log        # Count occurrences of "ERROR"
+7. 
+cat logfile.log | grep "ERROR"   
+# Extract only ERROR messages
+cat logfile.log | grep -E "ERROR|WARNING"  
+# Extract both ERROR and WARNING messages
+grep -c "ERROR" logfile.log   
+# Count how many ERROR logs are there
+grep -c "WARNING" logfile.log   
+# Count WARNING logs
+grep -c "ERROR" logfile.log   
+# Count how many ERROR logs are there
+grep -c "WARNING" logfile.log   
+# Count WARNING logs
