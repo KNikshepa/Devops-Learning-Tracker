@@ -95,5 +95,21 @@ d. cat >> existingfile.txt -> Append the content to existing file
 e. cat file1.txt file2.txt > combined.txt -> Concatenate and save to a new file:
 f. cat -n filename.txt -> content with line no
 
-20. 
+File Permissions & Ownership
+20. chmod: Change file permissions
+chmod +x file.txt -> Permission to execute
+chmod 777 file.txt -> Read, Write and execute
+chmod -w file.txt -> Remove write permission
+Permission	Numeric Value	Symbolic Representation
+No Permission	0	--- (No read, write, or execute)
+Read (r)	4	r--
+Write (w)	2	-w-
+Execute (x)	1	--x
+Read + Write	4 + 2 = 6	rw-
+Read + Execute	4 + 1 = 5	r-x
+Write + Execute	2 + 1 = 3	-wx
+Full Permission (Read + Write + Execute)	4 + 2 + 1 = 7	rwx
+
+
+
 
